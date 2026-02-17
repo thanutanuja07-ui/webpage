@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chandana Groups</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Chandana Groups</div>
+        <ul class="nav-links">
+            <li>Overview</li>
+            <li>Price</li>
+            <li>Blog</li>
+            <li>Feedback</li>
+            <li><button class="purchase-btn">Purchase</button></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main">
+        <div class="left">
+            <h1>Generate Awesome <br> Web Pages</h1>
+            <p>
+                The most important part of the Startup is the samples.
+                The samples form a set of 25 usable pages you can use as is
+                or you can add new blocks
+            </p>
+            <button class="learn-btn">Learn More</button>
+        </div>
+
+        <div class="right">
+            <div class="form-box">
+                <form id="signupForm">
+    <h2>Sign Up Now</h2>
+
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="password" id="password" placeholder="Your Password" required>
+
+    <div class="terms">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I Agree to the terms of services</label>
+    </div>
+
+    <button type="submit" class="signin-btn">Sign IN</button>
+
+    <div class="divider">
+        <span>or</span>
+    </div>
+
+    <button type="button" class="google-btn" onclick="loginGoogle()">
+        Login via Google
+    </button>
+
+    <p class="signin-text">
+        Do you have an Account? <span onclick="signInAlert()">Sign IN</span>
+    </p>
+</form>
+        </div>
+    </section>
+<script>
+
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let terms = document.getElementById("terms").checked;
+
+    if(email === "" || password === "") {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    if(!terms) {
+        alert("Please agree to the terms!");
+        return;
+    }
+
+    alert("Login Successful 🎉");
+});
+
+function loginGoogle(){
+    alert("Redirecting to Google Login...");
+}
+
+function signInAlert(){
+    alert("Redirecting to Sign In page...");
+}
+
+</script>
+
+</body>
+</html>

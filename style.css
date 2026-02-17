@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #1d169a;
+    color: white;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links li{
+    cursor: pointer;
+}
+
+.purchase-btn{
+    background: #ff4d6d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Section */
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+}
+
+/* Left Section */
+.left{
+    width: 50%;
+}
+
+.left h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.left p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.learn-btn{
+    background: #ff4d6d;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Right Section */
+.right{
+    width: 40%;
+}
+
+.form-box{
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.form-box h2{
+    margin-bottom: 20px;
+}
+
+.form-box input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.terms{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.signin-btn
