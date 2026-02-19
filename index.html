@@ -2,95 +2,221 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- IMPORTANT FOR RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Chandana Groups</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #2e1fa6;
+            color: white;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .purchase-btn {
+            background-color: #ff4d6d;
+            border-radius: 20px;
+            padding: 8px 20px;
+            color: white;
+            border: none;
+        }
+
+        .hero-section {
+            padding: 60px 0;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .learn-btn {
+            background-color: #ff4d6d;
+            border-radius: 25px;
+            padding: 10px 25px;
+            color: white;
+            border: none;
+        }
+
+        .form-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            color: black;
+        }
+
+        .signin-btn {
+            background-color: #3b2dbf;
+            border-radius: 25px;
+            color: white;
+        }
+
+        .google-btn {
+            background-color: #6c63ff;
+            border-radius: 25px;
+            color: white;
+        }
+
+        /* 🔥 Extra Responsive Tweaks */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            .hero-section {
+                text-align: center;
+            }
+
+            .navbar {
+                padding: 15px !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Chandana Groups</div>
-        <ul class="nav-links">
-            <li>Overview</li>
-            <li>Price</li>
-            <li>Blog</li>
-            <li>Feedback</li>
-            <li><button class="purchase-btn">Purchase</button></li>
-        </ul>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4 py-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Chandana Groups</a>
 
-    <!-- Main Section -->
-    <section class="main">
-        <div class="left">
-            <h1>Generate Awesome <br> Web Pages</h1>
-            <p>
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item px-2">
+                    <a class="nav-link text-white" href="#">Overview</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-white" href="#">Price</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-white" href="#">Blog</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-white" href="#">Feedback</a>
+                </li>
+                <li class="nav-item px-2 mt-2 mt-lg-0">
+                    <button class="purchase-btn w-100 w-lg-auto">Purchase</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="container hero-section">
+    <div class="row align-items-center gy-4">
+
+        <!-- Left Side -->
+        <div class="col-lg-6 col-md-12">
+            <h1 class="hero-title">Generate Awesome <br> Web Pages</h1>
+            <p class="mt-4">
                 The most important part of the Startup is the samples.
                 The samples form a set of 25 usable pages you can use as is
-                or you can add new blocks
+                or you can add new blocks.
             </p>
-            <button class="learn-btn">Learn More</button>
+            <button class="learn-btn mt-3">Learn More</button>
         </div>
 
-        <div class="right">
-            <div class="form-box">
+        <!-- Right Side Form -->
+        <div class="col-lg-6 col-md-12">
+            <div class="form-box shadow-lg">
+
+                <h3 class="text-center mb-4">Sign Up Now</h3>
+
                 <form id="signupForm">
-    <h2>Sign Up Now</h2>
 
-    <input type="email" id="email" placeholder="Your Email" required>
-    <input type="password" id="password" placeholder="Your Password" required>
+                    <div class="mb-3">
+                        <input type="email" class="form-control rounded-pill"
+                               id="email" placeholder="Your Email" required>
+                    </div>
 
-    <div class="terms">
-        <input type="checkbox" id="terms" required>
-        <label for="terms">I Agree to the terms of services</label>
-    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control rounded-pill"
+                               id="password" placeholder="Your Password" required>
+                    </div>
 
-    <button type="submit" class="signin-btn">Sign IN</button>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox"
+                               id="terms" required>
+                        <label class="form-check-label">
+                            I Agree to the terms of services
+                        </label>
+                    </div>
 
-    <div class="divider">
-        <span>or</span>
-    </div>
+                    <button type="submit"
+                            class="btn signin-btn w-100 mb-3">
+                        Sign IN
+                    </button>
 
-    <button type="button" class="google-btn" onclick="loginGoogle()">
-        Login via Google
-    </button>
+                    <div class="text-center mb-3">or</div>
 
-    <p class="signin-text">
-        Do you have an Account? <span onclick="signInAlert()">Sign IN</span>
-    </p>
-</form>
+                    <button type="button"
+                            class="btn google-btn w-100"
+                            onclick="googleLogin()">
+                        Login via Google
+                    </button>
+
+                    <p class="text-center mt-3">
+                        Do you have an Account?
+                        <span class="text-success"
+                              style="cursor:pointer;"
+                              onclick="redirectSignIn()">
+                            Sign IN
+                        </span>
+                    </p>
+
+                </form>
+
+            </div>
         </div>
-    </section>
+
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+        e.preventDefault();
 
-document.getElementById("signupForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
 
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    let terms = document.getElementById("terms").checked;
+        if(email && password) {
+            alert("Login Successful");
+        } else {
+            alert("Please fill all fields!");
+        }
+    });
 
-    if(email === "" || password === "") {
-        alert("Please fill all fields!");
-        return;
+    function googleLogin() {
+        alert("Redirecting to Google...");
     }
 
-    if(!terms) {
-        alert("Please agree to the terms!");
-        return;
+    function redirectSignIn() {
+        alert("Redirecting to Sign In page...");
     }
-
-    alert("Login Successful 🎉");
-});
-
-function loginGoogle(){
-    alert("Redirecting to Google Login...");
-}
-
-function signInAlert(){
-    alert("Redirecting to Sign In page...");
-}
-
 </script>
 
 </body>
 </html>
+
